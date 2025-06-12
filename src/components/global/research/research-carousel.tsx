@@ -24,7 +24,7 @@ const ResearchCarousel = () => {
                             <div className='px-6 pb-4'>
                                 <p className='mb-2'>{research.date}</p>
                                 <p className='text-xl text-primary mb-4'>{research.title}</p>
-                                <Link href={research.url} className='underline text-blue-600'>Read More</Link>
+                                <Link href={research.url} className='underline text-blue-600'>Read More.</Link>
                             </div>
                         </div>
                     </CarouselItem>
