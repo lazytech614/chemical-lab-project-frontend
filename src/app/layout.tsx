@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton_SC, Heebo } from "next/font/google";
 import "./globals.css";
+import GlobalHeader from "@/components/global/global-header";
+import GlobalFooter from "@/components/global/global-footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const antonSC = Anton_SC({
+  variable: "--font-anton-sc",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const heebo = Heebo({
+  variable: "--font-heebo",
   subsets: ["latin"],
 });
 
@@ -25,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${antonSC.variable} ${heebo.variable} antialiased`}
       >
+        <GlobalHeader />
         {children}
+        <GlobalFooter />
       </body>
     </html>
   );
